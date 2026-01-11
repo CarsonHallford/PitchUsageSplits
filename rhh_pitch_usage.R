@@ -75,7 +75,7 @@ team_url <- glue::glue(
 # Create HTML Header for the GT Table
 header_html <- glue::glue("
   <div style='position: relative; width: 100%; text-align: center; padding-top: 10px;'>
-    <img src='{headshot_url}' style='position: absolute; left: 0; top: -10px; height: 70px;'>
+    <img src='{headshot_url}' style='position: absolute; left: 0; top: -8px; height: 70px;'>
     <img src='{team_url}' style='position: absolute; right: 0; top: -4px; height: 70px;'>
     <div style='font-weight: bold; font-size: 32px; transform: translateY(-8px);'>{p_name}</div>
     <div style='font-size: 16px; color: #666; transform: translateY(-6px);'>
@@ -102,6 +102,10 @@ pitch_mix_gt <-
   # Relabel columns using pitch dictionary
   cols_label(count = "Count", !!!pitch_type_labels[pitch_cols]) |>
   cols_align(align = "center", columns = everything()) |>
+  cols_width(
+    count ~ pct(15),
+    all_of(pitch_cols) ~ pct((100 - 15) / length(pitch_cols))
+  ) |>
   # Source Notes / Footer
   tab_source_note(
     source_note = html(
