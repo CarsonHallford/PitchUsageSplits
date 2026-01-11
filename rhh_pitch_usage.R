@@ -6,7 +6,7 @@ library(gt)
 
 # Mapping Statcast abbreviations to full pitch names for table labels
 pitch_type_labels <- c(
-  CH = "Changeup", CU = "Curveball", FF = "4-Seam Fastball",
+  CH = "Changeup", CU = "Curveball", FF = "Fastball",
   SI = "Sinker", SL = "Slider", FC = "Cutter", FS = "Splitter",
   KC = "Knuckle Curve", ST = "Sweeper", SV = "Slurve",
   FO = "Forkball", SC = "Screwball", CS = "Slow Curve",
