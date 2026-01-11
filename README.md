@@ -36,4 +36,4 @@ The resulting table provides insights into a pitcher's tendencies in different c
 * Author: Carson Hallford
 
 ## Example Output:
-![Pitch Usage vs RHH](pitch_usage_rhh.png)
+![Pitch Usage vs RHH](pitch_usage_rhh.png?v=2)
